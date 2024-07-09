@@ -94,7 +94,7 @@ This script also installs a couple of brew casks[^6], one for the nerd font and 
 
 ```bash
 echo "=========="
-echo "Preparing to install fira code nerd font (required for some formulaes)"
+echo "Preparing to install fira code nerd font (required for some formulae)"
 echo "=========="
 brew install --cask font-fira-code-nerd-font
 
