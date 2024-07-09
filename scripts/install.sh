@@ -66,7 +66,7 @@ done
 #and they do seem to be supported for brew so they shouldnt cause issues
 
 echo "=========="
-echo "Preparing to install fira code nerd font (required for some formulaes)"
+echo "Preparing to install fira code nerd font (required for some formulae)"
 echo "=========="
 brew install --cask font-fira-code-nerd-font
 
