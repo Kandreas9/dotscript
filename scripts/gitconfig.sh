@@ -2,7 +2,7 @@
 
 echo "=========="
 echo "Exept checking if you have inputed any text," 
-echo "there is no sanitation make sure to double check your username and your e-mail"
+echo "there is no sanitation, make sure to double check your username and your e-mail"
 echo "=========="
 
 read -p 'Username: ' username

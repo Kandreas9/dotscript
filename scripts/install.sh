@@ -51,19 +51,20 @@ echo "Preparing to update brew 📤"
 echo “==========”
 brew update
 
-for formulae in bat starship eza fnm tlrc fzf dust trash neovim git
+#Add or remove any brew formulae here
+for formula in bat starship eza fnm tlrc fzf dust trash neovim git
 do
   echo "=========="
-  echo "Preparing to install ${formulae}"
+  echo "Preparing to install ${formula}"
   echo "=========="
 
-  brew install "${formulae}"
+  brew install "${formula}"
 done
 
-#The next two cask installations with brew are my two exceptions.
-#I wouldnt recommend using brew for casks or applications,
+#The next three cask installations with brew are my three exceptions.
+#I wouldn't recommend using brew for casks/applications,
 #but these two would be harder to install without,
-#and they do seem to be supported for brew so they shouldnt cause issues
+#and they do seem to be supported for brew so they shouldn't cause issues
 
 echo "=========="
 echo "Preparing to install fira code nerd font (required for some formulae)"
@@ -74,6 +75,11 @@ echo "=========="
 echo "Preparing to install raycast (better spotlight)"
 echo "=========="
 brew install --cask raycast
+
+echo "=========="
+echo "Preparing to install ungoogled chromium"
+echo "=========="
+brew install --cask eloston-chromium
 
 echo “==========”
 echo "Script has finished"

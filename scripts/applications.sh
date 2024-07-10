@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ===ADD ANY NEW LINKS YOU WANT TO USE TO DOWNLOAD APPLICATIONS IN THE APPS LIST===
+# ===ADD ANY NEW LINKS YOU WOULD USE TO DOWNLOAD APPLICATIONS IN THE APPS LIST===
 
 apps=(
   "https://discord.com/api/download?platform=osx"
@@ -8,7 +8,6 @@ apps=(
   "https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-mac-arm64"
   "https://github.com/keepassxreboot/keepassxc/releases/download/2.7.9/KeePassXC-2.7.9-arm64.dmg"
   "https://getkap.co/api/download/arm64"
-  "https://releases.arc.net/release/Arc-latest.dmg"
   "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.5/Obsidian-1.6.5.dmg"
 )
 
