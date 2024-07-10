@@ -52,10 +52,10 @@ git clone git@github.com:Kandreas9/dotscript.git
 
 The intended usage is to use the `setup.sh` script at the top level of the repository, despite that until I have tested the `setup.sh` script to a bigger extent then I would recommend running all four scripts in the `/scripts` folder one by one in this order specifically:
 
-> :warning: Before you can run any of the 5 scripts that are included in the project you have to give them executable permission potentially. If a script can't run after you just clone the project then go ahead and run this command for each script `chmod +x /path/to/script.sh` while replacing the path to the path of each of the scripts installed in your computer. **Be very carefull** when adding any permissions or running any scripts. Do not trust me or anyone and make sure you do your own research for safety reasons. 
+> :warning: Before you can run any of the 5 scripts that are included in the project you have to give them executable permission potentially. If a script can't run after you just clone the project then go ahead and run this command for each script `chmod +x /path/to/script.sh` while replacing the path to the path of each of the scripts installed in your computer. **Be very careful** when adding any permissions or running any scripts. Do not trust me or anyone and make sure you do your own research for safety reasons. 
 
 1. **install.sh** :point_right: This bash script does a few things. 
-	- First it installs rosetta 2 if it hasn't already been installed. 
+	- First it installs Rosetta 2 if it hasn't already been installed. 
 	- Next if brew isn't installed, brew will be installed (If you haven't installed the x-code tools yet, while brew tries to be installed it will prompt to get the x-code tools as well).
 	- Finally it will install all the packages for brew in a given list inside of the bash script.
 2. **applications.sh** :point_right: This bash script contains a list of links which get used to install and setup all the applications i.g. discord, docker desktop, etc.
@@ -78,7 +78,7 @@ If you are crazy enough to want to use this project and customize it to your lik
 In this script you can add or remove any brew formulae[^5] at this part of the code:
 
 ```bash
-#Add or remove the brew formulae names from the list in the bellow line
+#Add or remove the brew formulae names from the list in the below line
 for formulae in bat starship eza fnm tlrc fzf dust trash neovim git
 do
   echo "=========="
@@ -90,7 +90,7 @@ done
 
 ```
 
-This script also installs a couple of brew casks[^6], one for the nerd font and another for raycast. You can either remove, comment them out, change them, or keep them depending on your needs:
+This script also installs a few brew casks[^6], one for the nerd font, another for raycast and ungoogled chromium. You can either remove, comment them out, change them, or keep them depending on your needs:
 
 ```bash
 echo "=========="
@@ -103,6 +103,10 @@ echo "Preparing to install raycast (better spotlight)"
 echo "=========="
 brew install --cask raycast
 
+echo "=========="
+echo "Preparing to install ungoogled chromium"
+echo "=========="
+brew install --cask eloston-chromium
 ```
 
 2. **applications.sh**
@@ -118,7 +122,6 @@ apps=(
   "https://discord.com/api/download?platform=osx"
   "https://iterm2.com/downloads/stable/latest"
   "https://getkap.co/api/download/arm64"
-  "https://releases.arc.net/release/Arc-latest.dmg"
   "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.5/Obsidian-1.6.5.dmg"
   #Add your links here and or remove previous links
 )
@@ -127,7 +130,7 @@ apps=(
 
 3. **setupsyms.sh**
 
-Ideally you won't ever have to touch this file, unless you would like to add new symlinks for new dotfiles that you want them to be in `~/.config`. If you want to do that, then you would reuse the line bellow to delete the symlink if it exists and the line bellow that creates the symlink.
+Ideally you won't ever have to touch this file, unless you would like to add new symlinks for new dotfiles that you want them to be in `~/.config`. If you want to do that, then you would reuse the line below to delete the symlink if it exists and the line below that creates the symlink.
 
 ```bash
 #Remove previous files or symlinks
@@ -171,8 +174,8 @@ Applications:
 - Docker :point_right: Tools to containerize
 - Keepassxc :point_right: Password manager
 - Kap :point_right: MacOS screen recording
-- Arc :point_right: Browser
 - Obsidian :point_right: Note taking app
+- Ungoogled Chromium :point_right: Browser
 - Raycast :point_right: Spotlight alternative
 
 Font:
@@ -200,12 +203,12 @@ I am also human, the scripts work on my machine and I have done my best to consi
 	- Delete any zsh dotfiles you want in the root directory e.g. `~/.zshrc`.
 4. If the `gitconfig.sh` script fails, which really shouldn't happen ever, but anyways then you might want to:
 	- Delete the `~/.gitconfig` and the `~/.gitignore_global`.
-5. Finally unless you can figure out the problem, fix it yourself and rerun the scripts in the correct order. Go ahead and create an issue or a discussion in this repo and I will try to have a look at it when I get the time.
+5. Finally, unless you can figure out the problem, fix it yourself and rerun the scripts in the correct order. Go ahead and create an issue or a discussion in this repo and I will try to have a look at it when I get the time.
 
 ### Footnotes
 
 [^1]: A fork of vim, a keyboard based text editor -> https://neovim.io/
-[^2]: A unix shell alternative to other popular shells like bash -> https://zsh.sourceforge.io/
+[^2]: A Unix shell alternative to other popular shells like bash -> https://zsh.sourceforge.io/
 [^3]: Symlinks explanation
 [^4]: https://iterm2.com/documentation-fonts.html
 [^5]: Homebrew package definition that builds from upstream sources https://docs.brew.sh/Formula-Cookbook#homebrew-terminology
