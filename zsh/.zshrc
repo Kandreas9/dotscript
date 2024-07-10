@@ -6,7 +6,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
-export EDITOR="/usr/bin/nvim"
+export EDITOR="/opt/homebrew/bin/nvim"
 
 #Highlighting and pretty colors
 autoload -Uz colors && colors
